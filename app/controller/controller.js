@@ -15,6 +15,7 @@ var si=shortid.generate()
         lastname:req.body.lastname,
         email:req.body.email,
         mobile:req.body.mobile,
+        countryCode:req.body.countryCode,
         password:passwordLib.hashpassword(req.body.password),
         createdBy:si
     })
