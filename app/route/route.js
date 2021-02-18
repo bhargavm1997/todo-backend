@@ -15,6 +15,11 @@ app.get(`${baseurl}/singleView`,cont.singleView)
 app.put(`${baseurl}/update`,cont.update)
 app.post(`${baseurl}/forgot`,cont.forgot)
 app.put(`${baseurl}/updatePass`,cont.updatePass)
+app.post(`${baseurl}/addFriend`,cont.addFriend)
+app.delete(`${baseurl}/deleteTask`,cont.deleteTask)
+app.put(`${baseurl}/updateProfile`,cont.updateProfile)
+app.get(`${baseurl}/friendList`,cont.friendList)
+
 }
 
 

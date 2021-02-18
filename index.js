@@ -47,6 +47,7 @@ if(~file.indexOf(".js"))
 })
 
 
+let db = mongoose.connect(config.db.uri,{ useMongoClient: true });
 
 mongoose.connection.on("open",function(error){
     if(error)
@@ -65,4 +66,3 @@ mongoose.connection.on("error",function(error){
 
 server.listen(config.port)
 console.log(config.port)
-mongoose.connect(config.db.uri,{useMongoClient:true})

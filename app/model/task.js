@@ -18,6 +18,14 @@ let taskSchema=new Schema({
         type:String,
         default:""
     },
+    status:{
+        type:String,
+        default:""
+    },
+    subTask:{
+        type:String,
+        default:""
+    },
     users:[{
         type:Schema.Types.ObjectId,
         ref:"user"
@@ -29,6 +37,10 @@ let taskSchema=new Schema({
     createdOn:{
         type:Date,
         default:""
+    },
+    status:{
+        type:String,
+        default:"active"
     }
 
 

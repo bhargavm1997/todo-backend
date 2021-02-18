@@ -10,8 +10,9 @@ let hashpassword = (myPlaintextPassword) => {
   return hash
 }
 let comparePassword = (oldPassword, hashpassword, cb) => {
-    console.log(oldPassword+" "+ hashpassword)
   bcrypt.compare(oldPassword, hashpassword, (err, res) => {
+    console.log(oldPassword+" "+ hashpassword)
+
     if (err) {
       
       cb(err, null)
