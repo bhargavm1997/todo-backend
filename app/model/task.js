@@ -26,9 +26,9 @@ let taskSchema=new Schema({
         type:String,
         default:""
     },
-    users:[{
+    friends:[{
         type:Schema.Types.ObjectId,
-        ref:"user"
+        ref:"friend"
     }],
     createdBy:{
         type:String,

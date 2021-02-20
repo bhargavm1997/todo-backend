@@ -42,8 +42,42 @@ else{
 })
 }
 
+let inviteFriend=(senderName,Subject)=>
+{
+       let a=nm.createTransport({
+        host:"smtp.googlemail.com",
+        port:465,
+        secure:true,
+        auth:{
+
+            user:"def831024@gmail.com",
+            pass:"Kaddy@1994"
+       }})
+
+       
+var mailOptions={
+    from:"def831024@gmail.com",
+    to:senderName,
+    Subject:Subject,
+    html:"<h4>Hello,</h4> <h5>  Please sign up to proceed and copy paste below link in new tab  <br> <a>http://localhost:4200/signup</a></h5>"
+}
+
+a.sendMail(mailOptions,function(err,result)
+{
+if(err)
+{
+    console.log("error")
+}
+else{
+    console.log("email sent"+result.response)
+}
+    
+})
+
+}
+
 
 module.exports={
-
+      inviteFriend:inviteFriend,
     sendMail:sendmail
 }
